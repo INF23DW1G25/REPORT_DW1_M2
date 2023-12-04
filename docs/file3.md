@@ -1,4 +1,4 @@
-# File 2 : Desenvolvimento
+# File 3 : Desenvolvimento
 
 A criação da API procurou aplicar os conceitos ensinados na disciplina de Desenvolvimento WEB I, além de utilizar as ferramentas e aplicações recomendadas durante esta cadeira.
 
@@ -15,4 +15,4 @@ Podemos ver as printscreen's em [/doc/images/Postman](https://github.com/INF23DW
 
 ---
 
-[< Previous](c2.md) | [^ Main](../../../) |
+[< Previous](file2.md) | [^ Main](../../../) |

@@ -19,17 +19,17 @@ O tema escolhido foi a criação de uma API para uma todo-list que é constituí
 
 ## Galeria
 
-# Swagger IO - OpenAPI 3.0
+### Swagger IO - OpenAPI 3.0
 
 ![swagger](https://github.com/INF23DW1G25/REPORT_DW1_M2/blob/master/docs/images/Swagger/swagger_resources.png)
 As restantes imagens encontram-se em [/doc/images/Swagger](https://github.com/INF23DW1G25/REPORT_DW1_M2/blob/master/docs/images/Swagger)
 
-# Docker
+### Docker
 
 ![docker](https://github.com/INF23DW1G25/REPORT_DW1_M2/blob/master/docs/images/Docker/Containers.png)
 As restantes imagens encontram-se em [/doc/images/Docker](https://github.com/INF23DW1G25/REPORT_DW1_M2/tree/master/docs/images/Docker)
 
-# Postman
+### Postman
 
 ![postman](https://github.com/INF23DW1G25/REPORT_DW1_M2/blob/master/docs/images/Postman/postman_collection.png)
 
