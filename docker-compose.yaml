@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: todo_list
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: 1234
+    ports:
+      - "3306:3306"
+    volumes:
+      ### Boa prática, criar um script para ser executado automaticamente quando o coteiner é iniciado pela 1º vez ###
+      - ./utils/mysql-init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
+
+  nodejs-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    command: ["./utils/wait-for-it.sh", "mysql:3306", "--", "npm", "start"]

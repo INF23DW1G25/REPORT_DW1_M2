@@ -1,0 +1,371 @@
+openapi: 3.0.0
+info:
+  title: M2 - G25
+  description: todo-list
+  termsOfService: https://github.com/INF23DW1G25/REPORT_DW1_M2
+  contact:
+    name: M2 - G25
+    email: random_email@umaia.pt
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: http://localhost:8080
+    description: My localhost
+    variables:
+      basePath:
+        default: /
+paths:
+  /user:
+    get:
+      tags:
+        - User
+      operationId: userGET
+      responses:
+        "200":
+          description: A list of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+                x-content-type: application/json
+      x-swagger-router-controller: User
+    post:
+      tags:
+        - User
+      operationId: userPOST
+      requestBody:
+        $ref: "#/components/requestBodies/User"
+      responses:
+        "200":
+          description: User successfully created
+      x-swagger-router-controller: User
+  /user/{user_id}:
+    get:
+      tags:
+        - User
+      operationId: userUser_idGET
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: A user
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+      x-swagger-router-controller: User
+    put:
+      tags:
+        - User
+      operationId: userUser_idPUT
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        $ref: "#/components/requestBodies/User"
+      responses:
+        "200":
+          description: User successfully updated
+      x-swagger-router-controller: User
+    delete:
+      tags:
+        - User
+      operationId: userUser_idDELETE
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: User successfully deleted
+      x-swagger-router-controller: User
+  /user/{user_id}/task:
+    get:
+      tags:
+        - Task
+      operationId: userUser_idTaskGET
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: A list of tasks for a user
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Task"
+                x-content-type: application/json
+      x-swagger-router-controller: Task
+  /task:
+    get:
+      tags:
+        - Task
+      operationId: taskGET
+      responses:
+        "200":
+          description: A list of tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Task"
+                x-content-type: application/json
+      x-swagger-router-controller: Task
+    post:
+      tags:
+        - Task
+      operationId: taskPOST
+      requestBody:
+        $ref: "#/components/requestBodies/Task"
+      responses:
+        "200":
+          description: Task successfully created
+      x-swagger-router-controller: Task
+  /task/{task_id}:
+    get:
+      tags:
+        - Task
+      operationId: taskTask_idGET
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: A task
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+      x-swagger-router-controller: Task
+    put:
+      tags:
+        - Task
+      operationId: taskTask_idPUT
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        $ref: "#/components/requestBodies/Task"
+      responses:
+        "200":
+          description: Task successfully updated
+      x-swagger-router-controller: Task
+    delete:
+      tags:
+        - Task
+      operationId: taskTask_idDELETE
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: Task successfully deleted
+      x-swagger-router-controller: Task
+  /category:
+    get:
+      tags:
+        - Category
+      operationId: categoryGET
+      responses:
+        "200":
+          description: A list of categories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+                x-content-type: application/json
+      x-swagger-router-controller: Category
+    post:
+      tags:
+        - Category
+      operationId: categoryPOST
+      requestBody:
+        $ref: "#/components/requestBodies/Category"
+      responses:
+        "200":
+          description: Category successfully created
+      x-swagger-router-controller: Category
+  /category/{category_id}:
+    get:
+      tags:
+        - Category
+      operationId: categoryCategory_idGET
+      parameters:
+        - name: category_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: A category
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+      x-swagger-router-controller: Category
+    put:
+      tags:
+        - Category
+      operationId: categoryCategory_idPUT
+      parameters:
+        - name: category_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        $ref: "#/components/requestBodies/Category"
+      responses:
+        "200":
+          description: Category successfully updated
+      x-swagger-router-controller: Category
+    delete:
+      tags:
+        - Category
+      operationId: categoryCategory_idDELETE
+      parameters:
+        - name: category_id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: Category successfully deleted
+      x-swagger-router-controller: Category
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        user_id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        email:
+          type: string
+      example:
+        user_id: 0
+        name: name
+        email: email
+    Task:
+      type: object
+      properties:
+        task_id:
+          type: integer
+          format: int64
+        description:
+          type: string
+        conclusion_date:
+          type: string
+          format: date
+        status:
+          type: string
+        user_id:
+          type: integer
+          format: int64
+        category_id:
+          type: integer
+          format: int64
+      example:
+        conclusion_date: 2000-01-23T00:00:00.000Z
+        category_id: 1
+        user_id: 6
+        description: description
+        task_id: 0
+        status: status
+    Category:
+      type: object
+      properties:
+        category_id:
+          type: integer
+          format: int64
+        name:
+          type: string
+      example:
+        category_id: 0
+        name: name
+  requestBodies:
+    User:
+      description: User object that needs to be added to the store
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/User"
+    Task:
+      description: Task object that needs to be added to the store
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Task"
+    Category:
+      description: Category object that needs to be added to the store
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Category"
