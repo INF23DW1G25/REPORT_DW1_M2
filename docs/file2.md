@@ -1,6 +1,6 @@
 # File 2 : Recursos
 
-\_A presenta API tem 3 recursos, que são eles:
+A presente API tem 3 recursos, que são eles:
 
 ## User
 
