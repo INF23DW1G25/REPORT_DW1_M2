@@ -15,7 +15,7 @@ O tema escolhido foi a criação de uma API para uma todo-list que é constituí
 
 - [Source code](https://github.com/INF23DW1G25/REPORT_DW1_M2)
 - [Postman](https://github.com/INF23DW1G25/REPORT_DW1_M2/tree/master/Postman)
-- [Imagens] (https://github.com/INF23DW1G25/REPORT_DW1_M2/tree/master/docs/images)
+- [Imagens](https://github.com/INF23DW1G25/REPORT_DW1_M2/tree/master/docs/images)
 
 ## Galeria
 
