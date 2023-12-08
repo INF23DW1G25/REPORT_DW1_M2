@@ -11,6 +11,8 @@ services:
       - "3306:3306"
     volumes:
       - ./utils/mysql-init.sql:/docker-entrypoint-initdb.d/mysql-init.sql
+    networks:
+      - todo-network
 
   nodejs-server:
     build:
@@ -20,4 +22,10 @@ services:
       - "8080:8080"
     depends_on:
       - mysql
-    command: ["./utils/wait-for-it.sh", "127.0.0.1:3306", "--", "npm", "start"]
+    command: ["./utils/wait-for-it.sh", "mysql:3306", "--", "npm", "start"]
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
+    driver: bridge
