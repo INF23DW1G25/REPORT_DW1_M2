@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXISTS todo_list;
+CREATE SCHEMA todo_list;
 
 USE todo_list;
 
@@ -89,3 +89,9 @@ INSERT INTO task (description, conclusion_date, status, user_id, category_id) VA
     ('Preparar apresentação de vendas', '2023-12-16', 'completed', 28, 1),
     ('Fazer exercícios de biologia', '2023-11-21', 'pending', 29, 2),
     ('Aula de pintura', NULL, 'pending', 30, 3);
+
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '12345678' WITH GRANT OPTION;
+ALTER USER 'root'@'%' IDENTIFIED WITH 'mysql_native_password' BY '12345678';
+FLUSH PRIVILEGES;
+
+  

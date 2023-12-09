@@ -1,15 +1,15 @@
-"use strict"
+`use strict`;
 
-const mysql = require("mysql2")
+var mysql = require("mysql")
 
-const connection = mysql.createConnection({
+var connection = mysql.createConnection({
   host: "mysql",
-  user: "mysql",
-  password: "1234",
+  user: "root",
+  password: "12345678",
   database: "todo_list",
 })
 
-connection.connect((err) => {
+connection.connect(function (err) {
   if (err) {
     console.log("Error on database connection.")
     throw err
