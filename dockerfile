@@ -1,4 +1,3 @@
-# Use a imagem oficial do Node como base
 FROM node:17
 ENV NODE_ENV=production
 WORKDIR /app
@@ -8,3 +7,5 @@ RUN chown -R node /app
 EXPOSE 8080
 USER node
 CMD ["npm", "start"]
+
+
