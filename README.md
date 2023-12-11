@@ -51,3 +51,6 @@ As restantes imagens encontram-se em [/doc/images/Docker](https://github.com/INF
 - Capitulo 1: [Descrição do projeto](docs/file1.md)
 - Capitulo 2: [Recursos](docs/file2.md)
 - Capitulo 3: [Desenvolvimento](docs/file3.md)
+
+### Dockerhub
+[DockerHub](https://hub.docker.com/repository/docker/dw1m2g25/report_dw1_m2/general)
