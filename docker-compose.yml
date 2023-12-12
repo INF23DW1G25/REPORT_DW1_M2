@@ -2,7 +2,7 @@ version: "3.7"
 services:
   mysql:
     container_name: todo-mysql
-    image: dw1m2g25/todo-mysql:latest
+    image: dw1m2g25/report_dw1_m2:todo-mysql
     build:
       context: .
       dockerfile: ./dockerfile.mysql
@@ -20,7 +20,7 @@ services:
     depends_on:
       - mysql
     container_name: todo-app
-    image: dw1m2g25/todo-app:latest
+    image: dw1m2g25/report_dw1_m2:todo-app
     build:
       context: .
       dockerfile: ./dockerfile

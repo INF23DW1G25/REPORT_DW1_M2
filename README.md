@@ -54,3 +54,23 @@ As restantes imagens encontram-se em [/doc/images/Docker](https://github.com/INF
 
 ### Dockerhub
 [DockerHub](https://hub.docker.com/repository/docker/dw1m2g25/report_dw1_m2/general)
+
+### Instruções de Instalação
+
+```
+MYSQL -> dw1m2g25/report_dw1_m2:todo-mysql
+```
+```
+NODEJS SERVER -> dw1m2g25/report_dw1_m2:todo-app
+```
+```
+Clone Github repositorio -> git clone https://github.com/INF23DW1G25/REPORT_DW1_M2.git
+```
+```
+Finalmente correr o comando -> docker compose up -d --build
+```
+
+
+
+
+
